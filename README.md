@@ -1,7 +1,7 @@
 #### Intro
 We need to build the front end web app of our ecommerce store. This project is based on an existing website that has no functionality. If you worked for this company, they may ask you to fix their current website that doesn't do anything and make it functional for people to buy products on it. You might make the decision to use React to do this. Converting normal websites to React components is a very common thing to do in the industry.
 
-Our simple site will list out some hard coded products. Is this realistic? Would a small company only sell the same 10 items in a year? A user needs to be able to add a product to their shopping cart by clicking a button. How do you atually code the act of adding a product to the a digital shopping cart? 
+Our simple site will list out some hard coded products. Is this realistic? Would a small company only sell the same 10 items in a year? A user needs to be able to add a product to their shopping cart by clicking a button. How do you atually code the act of adding a product to the a digital shopping cart?
 
 
 https://blackrockdigital.github.io/startbootstrap-shop-homepage/
@@ -34,8 +34,8 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 * Create a index.js file and put the code of rendering App into the div with id = root
 * Provide App with a prop called "products" sending in the products array from the global state variable in state.js
 
-### App 
-* Cut whatever html is left inside the root div from index.html and turn it into JSX by pasting it into your App.js component. 
+### App
+* Cut whatever html is left inside the root div from index.html and turn it into JSX by pasting it into your App.js component.
 * Use all your other components in App. Don't forget where they should have gone.
 * Make sure everything is valid JSX. Remember className. HTML comments are not valid JSX.
 * App should use the products prop and map the array of products into an array of ProductDetail components
@@ -74,7 +74,7 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 * Let's create a very simple checkout process
 * When you click the checkout button, whatever products are in the cart should somehow be processed so a person knows to ship those products to the customer
 * The products in the cart need to be sent to the server to be saved as an order
-* When the products are recieved by the server, they need to be saved in a database 
+* When the products are recieved by the server, they need to be saved in a database
 
 
 
