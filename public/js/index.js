@@ -1,4 +1,4 @@
-ReactDOM.render(<div><Header /><Footer/></div>,
+ReactDOM.render(<App state={state} />,
     document.getElementById("root"));
 
 
