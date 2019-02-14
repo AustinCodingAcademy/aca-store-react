@@ -19,6 +19,7 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
    * Header
    * Footer
    * Carousel
+   
    * Think of some other components you could make
 * Look in index.html for the existing html to use for the components
 * Use the comments and the expand/collapse feature of the editor to make sure you get the correct html. Normally you would need to figure this out yourself but we are learning.
