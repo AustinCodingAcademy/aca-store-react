@@ -1,18 +1,18 @@
 #### Intro
-We need to build the front end web app of our ecommerce store. This project is based on an existing website that has no functionality. If you worked for this company, they may ask you to fix their current website that doesn't do anything and make it functional for people to buy products on it. You might make the decision to use React to do this. Converting normal websites to React components is a very common thing to do in the industry.
+<!-- We need to build the front end web app of our ecommerce store. This project is based on an existing website that has no functionality. If you worked for this company, they may ask you to fix their current website that doesn't do anything and make it functional for people to buy products on it. You might make the decision to use React to do this. Converting normal websites to React components is a very common thing to do in the industry.
 
-Our simple site will list out some hard coded products. Is this realistic? Would a small company only sell the same 10 items in a year? A user needs to be able to add a product to their shopping cart by clicking a button. How do you atually code the act of adding a product to the a digital shopping cart? 
+Our simple site will list out some hard coded products. Is this realistic? Would a small company only sell the same 10 items in a year? A user needs to be able to add a product to their shopping cart by clicking a button. How do you atually code the act of adding a product to the a digital shopping cart?  -->
 
 
 https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 
 ### Setup
-* Fork, clone, install http-server or use live server
-* Be aware of how to empty the cache
+<!-- * Fork, clone, install http-server or use live server
+* Be aware of how to empty the cache -->
 
 # Part 1
 ### Building React Components
- * Create a component folder in /public/js to hold component files
+ <!-- * Create a component folder in /public/js to hold component files -->
  * Organize this web page into appropriate function components (not class components)
    * App
    * ProductDetail
