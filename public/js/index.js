@@ -1,7 +1,8 @@
+
+
 ReactDOM.render(
-    <div>
-    <Header/>
-    <Carousel/>
-    </div>,
-    document.getElementById("root")
-)
+    <App 
+      numberOfItemsInCart = {state.numberOfItemsInCart}
+      products={state.products}
+    />
+    ,document.getElementById("root"));
