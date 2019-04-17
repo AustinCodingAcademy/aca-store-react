@@ -19,13 +19,18 @@ function ProductDetail(props) {
                     </h4>
                     <p>{props.prods.description}</p>
                 </div>
+                
                 <div className="ratings">
-                    <p className="pull-right">{props.prods.reviews}</p>
+                    <p className="pull-right">{props.prods.reviews} Reviews</p>
                     <p>
                         {stars}
                         {greyStars}
                     </p>
                 </div>
+                <button onClick={(event)=>{
+                    
+                    // props.addItemToCart
+                    }}>Add To Cart</button>
             </div>
         </div>
     )

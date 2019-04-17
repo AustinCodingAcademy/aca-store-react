@@ -1,8 +1,19 @@
-function App(props) {
-    console.log(props.cart)
+class App extends React.Component {
+    state={
+        shoppingCart:[]
+    }
+    addItemToCart = (product)=> {
+     this.setState(()=>{
+         this.state.shoppingCart.push(product);
+         return {shoppingCart:this.state.shoppingCart}
+     })
+    }
+
+
+    render() {
     return (
         <div className="App">
-            <Header ItemsInCart={props.cart} />
+            <Header ItemsInCart={this.cart} />
 
             <div className="container">
 
@@ -20,11 +31,13 @@ function App(props) {
                     <div className="col-md-9">
                         <Carousel />
                         <div className="row">
-                            {props.products.map((product,i) => {
+                            {this.props.products.map((product,i) => {
                                 return (
                                     <ProductDetail 
                                     key={i} 
-                                    prods={props.products[i]} />
+                                    prods={this.props.products[i]}
+                                    cart={this.props.cart} 
+                                    addItemToCart={addItemToCart}/>
                                 )
                             })}
 
@@ -47,4 +60,6 @@ function App(props) {
             </div>
         </div>
     )
+                        
+}
 }
