@@ -1,27 +1,13 @@
 
 const {
-    header,
-    newComments,
-    newTasks,
-    newOrders,
-    tickets,
-    orders,
-    taskItem,
-    tasks,
-    messages,
+  products,
+  numberOfItemsInCart
     } = state;
     
     ReactDOM.render(
       <App 
-        header={header}
-        dateTime={dateTime}
-        newComments={newComments}
-        newTasks={newTasks}
-        newOrders={newOrders}
-        tickets={tickets}
-        orders={orders} 
-        tasks={tasks}
-        messages={messages}
+        products={products}
+        numberOfItemsInCart={numberOfItemsInCart}
         />,
       document.getElementById("root")
     );

@@ -1,4 +1,8 @@
-function Header(){
+function Header(props){
+    let itemCount = 0
+    props.details.map((element)=>{
+        itemCount += element.quantity    
+    })
     return(
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                <div class="container">
@@ -25,7 +29,7 @@ function Header(){
                                <a href="#">Contact</a>
                            </li>
                            <li >
-                               <a href="#">Items In Cart (0)</a>
+                               <a href="#">{"Items In Cart (" + itemCount + ")"}</a>
                            </li>
                        </ul>
                    </div>

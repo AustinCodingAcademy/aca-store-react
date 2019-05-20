@@ -1,7 +1,7 @@
-function App(){
+function App(props){
     return(
         <div class="App">
-           <Header/>
+           <Header details={props.products}/>
            <div class="container">
                <div class="row">
                    <div class="col-md-3">
@@ -15,7 +15,7 @@ function App(){
                    <div class="col-md-9">
                       <Carousel/>
                        <div class="row">
-                           <ProductDetail />
+                            <ProductDetail details={props.products}/>
                        </div>
        
                    </div>
@@ -26,11 +26,11 @@ function App(){
           
            <div class="container">
        
-               <hr/>
+            <hr/>
        
             <Footer/>
 
            </div>
-             </div>
+        </div>
     )
 }

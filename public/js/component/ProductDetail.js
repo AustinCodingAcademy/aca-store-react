@@ -1,24 +1,39 @@
-function ProductDetail(){
+function ProductDetail(props){
+    function starGenerator(){
+        let stars = props.details[0].rating
+        let starArray = []
+        let span
+        for(let i =0; i<5;i++){
+            if(i<stars){
+                span = <span class="glyphicon glyphicon-star"></span>
+            }else{
+                span = <span class="glyphicon glyphicon-star-empty"></span>
+            }
+        starArray.push(span)
+        }
+        return starArray
+    }
+    function handleAddToCart(){
+        props.details[0].quantity += 1
+    }
     return(
         <div class="col-sm-4 col-lg-4 col-md-4">
                                <div class="thumbnail">
-                                   <img src="http://placehold.it/320x150" alt=""/>
+                                   <img src={props.details[0].imgUrl} alt=""/>
                                    <div class="caption">
-                                       <h4 class="pull-right">$24.99</h4>
-                                       <h4><a href="#">First Product</a>
+                                       <h4 class="pull-right">{props.details[0].price}</h4>
+                                       <h4><a className="nameDetails" href="#">{props.details[0].name}</a>
                                        </h4>
-                                       <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                       <p>{props.details[0].description+" "}<a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                                    </div>
                                    <div class="ratings">
-                                       <p class="pull-right">15 reviews</p>
+                                       <p class="pull-right">{props.details[0].reviews+" Reviews"}</p>
                                        <p>
-                                           <span class="glyphicon glyphicon-star"></span>
-                                           <span class="glyphicon glyphicon-star"></span>
-                                           <span class="glyphicon glyphicon-star"></span>
-                                           <span class="glyphicon glyphicon-star"></span>
-                                           <span class="glyphicon glyphicon-star"></span>
+                                        {starGenerator()}
                                        </p>
                                    </div>
+                                   <button id="addToCart" type="button" class="btn btn-primary" onClick={handleAddToCart}>Add to Cart
+                                   </button>
                                </div>
                            </div>
     )
