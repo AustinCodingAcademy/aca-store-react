@@ -1,7 +1,5 @@
 function App(){
     return(
-    <body>
-    <div id="root">
         <div class="App">
            <Header/>
            <div class="container">
@@ -34,10 +32,5 @@ function App(){
 
            </div>
              </div>
-        
-       
-
-    </div>
-    </body>
     )
 }
