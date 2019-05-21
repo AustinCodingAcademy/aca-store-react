@@ -27,7 +27,7 @@ body {
 }
 
 .caption h4 {
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .thumbnail img {
@@ -51,4 +51,9 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+#addToCart{
+    margin-left: 78px;
+    margin-bottom: 10px;
 }
