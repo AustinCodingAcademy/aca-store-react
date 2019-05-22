@@ -26,7 +26,6 @@ function App(props) {
                     <div className="col-md-9">
                         <Carousel />
                         <div className="row">
-                            {/* <ProductDetail product={props.products[0]} /> */}
                             {mapProductDetails()}        
                         </div>
         
