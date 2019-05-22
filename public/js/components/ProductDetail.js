@@ -1,3 +1,4 @@
+
 function ProductDetail(props) {
 
     function generateStars() {
@@ -28,7 +29,7 @@ function ProductDetail(props) {
                     </p>
                 </div>
                 <button onClick={() => {
-                    props.addToCart();
+                    props.addToCart(props.product.id);
                 }}>Add to Cart</button>
             </div>
         </div>

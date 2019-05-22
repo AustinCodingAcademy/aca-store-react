@@ -1,3 +1,4 @@
+let { cart } = state;
 function Header(props) {
     return (
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -25,7 +26,7 @@ function Header(props) {
                             <a href="#">Contact</a>
                         </li>
                         <li >
-                            <a href="#">Items In Cart {props.numberOfItemsInCart}</a>
+                            <a href="#">Items In Cart {cart.length}</a>
                         </li>
                     </ul>
                 </div>
