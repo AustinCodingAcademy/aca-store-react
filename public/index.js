@@ -1,3 +1,15 @@
-const { products, numberOfItemsInCart } = state;
+let { products, numberOfItemsInCart } = state;
 
-ReactDOM.render(<App products={products} numberOfItemsInCart={numberOfItemsInCart} />, document.getElementById('root'));
+const cart = [];
+
+function addToCart(p) {
+    numberOfItemsInCart++;
+    cart.push(p);
+    renderApp();
+}
+
+function renderApp() {
+    ReactDOM.render(<App products={products} numberOfItemsInCart={numberOfItemsInCart} addToCart={addToCart} />, document.getElementById('root'));
+}
+
+renderApp();

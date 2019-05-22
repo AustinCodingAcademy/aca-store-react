@@ -2,13 +2,13 @@ function App(props) {
 
     function mapProductDetails() {
         return props.products.map(p => {
-                return <ProductDetail product={p} />
+                return <ProductDetail product={p} addToCart={props.addToCart} />
             })
     }
 
     return (
         <div className="App">
-            <Header numberOfItemsInCart={numberOfItemsInCart} />
+            <Header numberOfItemsInCart={props.numberOfItemsInCart} />
         
             <div className="container">
         

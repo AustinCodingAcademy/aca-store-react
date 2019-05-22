@@ -1,4 +1,3 @@
-let { numberOfItemsInCart } = state;
 function ProductDetail(props) {
 
     function generateStars() {
@@ -29,8 +28,7 @@ function ProductDetail(props) {
                     </p>
                 </div>
                 <button onClick={() => {
-                    numberOfItemsInCart++;
-                    console.log(numberOfItemsInCart);
+                    props.addToCart();
                 }}>Add to Cart</button>
             </div>
         </div>
