@@ -1,0 +1,42 @@
+function App(props) {
+    let products = [];
+    products = props.products.map((product,i)=>{
+        return <ProductDetail 
+            key={i}
+            productName={product.name}
+            productDescription={product.description}
+            productReviews={product.reviews}
+            //productRating={product.rating}
+            productUrl={product.imgUrl}
+            productPrice={product.price}
+            addToCart={props.cartPlusOne}
+        />
+    })
+    return (
+        <div className="App">
+            <Header />    
+            <div className="container">   
+                <div className="row">
+                    <div className="col-md-3">
+                        <p className="lead">Shop Name</p>
+                        <div className="list-group">
+                            <a href="#" className="list-group-item">Category 1</a>
+                            <a href="#" className="list-group-item">Category 2</a>
+                            <a href="#" className="list-group-item">Category 3</a>
+                        </div>
+                    </div>
+                    <div className="col-md-9">
+                        <Carousel />
+                        <div className="row">
+                            {products}  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container">
+                <hr/>
+                <Footer />
+            </div>
+        </div>
+    )
+}
