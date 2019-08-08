@@ -1,19 +1,20 @@
 class NewProduct extends React.Component {
     state ={
-        id: 0,
-        name: "",
-        description: "",
-        reviews: 0,
-        rating: 0,
-        imgurl: "",
-        price: ""
+        id: '',
+        name: '',
+        description: '',
+        reviews: '',
+        rating: '',
+        imgurl: '',
+        price: ''
     }
     render(){
         return(
             <div>
                 <form onSubmit={(event)=>{
                     event.preventDefault();
-                    this.props.createItem(this.state)
+                    console.log(this.state)
+                    this.props.createItem(this.state);
                 }}
                 
                 onChange={(event)=>{
@@ -21,7 +22,7 @@ class NewProduct extends React.Component {
                     let val = et.value;
                     let name = et.name
                     this.setState(()=>{
-                        let newValue = {};
+                        let newValue = [];
                         newValue[name] = val;
                         return newValue
                     })
@@ -33,7 +34,7 @@ class NewProduct extends React.Component {
                     <h1>Rating: <input value={this.state.rating} name="rating"></input></h1>
                     <h1>imgUrl: <input value={this.state.imgurl} name="imgurl"></input></h1>
                     <h1>Price: <input value={this.state.price} name="price"></input></h1>
-
+                    <button>Add New Product</button>
                 </form>
             </div>
         )

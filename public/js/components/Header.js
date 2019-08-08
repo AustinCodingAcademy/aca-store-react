@@ -24,7 +24,7 @@ class Header extends React.Component {
                             <a href="#">Contact</a>
                         </li>
                         <li >
-                            <a href="#">Items In Cart ({this.numberOfItemsInCart})</a>
+                            <a href="#">Items In Cart ({this.props.numberOfItemsInCart})</a>
                         </li>
                     </ul>
                 </div>
