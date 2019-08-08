@@ -12,7 +12,6 @@ function ProductDetail(props) {
                     <p>{props.productDescription}</p>
                 </div>
                 <button onClick={(event)=>{
-                    debugger;
                         localState[name] = event.target.parentNode.name
                         props.addToCart(localState);
                         console.log(numberOfItemsInCart)
