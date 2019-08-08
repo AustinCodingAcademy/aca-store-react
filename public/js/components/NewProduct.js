@@ -12,9 +12,10 @@ class NewProduct extends React.Component {
         return(
             <div>
                 <form onSubmit={(event)=>{
+                    debugger
                     event.preventDefault();
-                    console.log(this.state)
                     this.props.createItem(this.state);
+                    this.props.printProduct();
                 }}
                 
                 onChange={(event)=>{

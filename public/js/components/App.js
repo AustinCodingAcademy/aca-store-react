@@ -1,9 +1,11 @@
 class App extends React.Component {
-    state = {
-        products: [],
-        numberOfItemsInCart: 7,
-        cart: []
-    };    
+
+        state = {
+            products: [],
+            numberOfItemsInCart: 7,
+            cart: []
+        }
+    
     addToCart = (cartItem) => {
         this.setState((state, props) => {
             this.state.numberOfItemsInCart += 1;
@@ -18,7 +20,8 @@ class App extends React.Component {
         })
     }
 
-    products = this.state.products.map((product,i)=>{
+    printProduct=()=>{
+    this.state.products.map((product,i)=>{
         return <ProductDetail 
         key={i}
         productName={product.name}
@@ -30,6 +33,7 @@ class App extends React.Component {
         //addToCart={this.state.numberOfItemsInCart}
         />
     })
+}
 
     render(){
         return (
@@ -49,6 +53,7 @@ class App extends React.Component {
                             <Carousel />
                             <NewProduct
                             createItem={this.createItem}
+                            printProduct={this.printProduct}
                             />
                             <div className="row">
                                 {this.state.products}
