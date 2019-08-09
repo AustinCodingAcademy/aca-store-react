@@ -18,6 +18,7 @@ class App extends React.Component {
             this.state.products.push(JSON.stringify(item))
             return {products: this.state.products}
         })
+        console.log(this.state)
     }
 
     printProduct=()=>{
@@ -34,7 +35,6 @@ class App extends React.Component {
         />
     })
 }
-
     render(){
         return (
             <div className="App">

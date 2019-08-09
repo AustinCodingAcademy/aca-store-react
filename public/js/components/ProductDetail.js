@@ -12,7 +12,6 @@ class ProductDetail extends React.Component {
                         <p>{this.props.productDescription}</p>
                     </div>
                     <button onClick={()=>{
-                        debugger;
                             this.props.addToCart(this.props.productName);
                             console.log(this.props.numberOfItemsInCart)
                         }}>Add To Cart</button>
