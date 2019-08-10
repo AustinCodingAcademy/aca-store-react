@@ -4,7 +4,7 @@ class App extends React.Component {
         numberOfItemsInCart: 7,
         cart: []
     }
-    
+
     componentDidMount() {
         debugger
         fetch("http://localhost:3002/products")
