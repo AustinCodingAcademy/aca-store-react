@@ -1,11 +1,17 @@
 class App extends React.Component {
-
-        state = {
-            products: [],
-            numberOfItemsInCart: 7,
-            cart: []
-        }
+    state = {
+        products: [],
+        numberOfItemsInCart: 7,
+        cart: []
+    }
     
+    componentDidMount() {
+        debugger
+        fetch("http://localhost:3002/products")
+        .then(res=>res.json())
+        .then(products=>this.setState({products}));
+    }
+
     addToCart = (cartItem) => {
         this.setState((state, props) => {
             this.state.numberOfItemsInCart += 1;
@@ -20,21 +26,23 @@ class App extends React.Component {
         })
         console.log(this.state)
     }
-
+    
     printProduct=()=>{
-    this.state.products.map((product,i)=>{
-        return <ProductDetail 
-        key={i}
-        productName={product.name}
-        productDescription={product.description}
-        productReviews={product.reviews}
-        //productRating={product.rating}
-        productUrl={product.imgUrl}
-        productPrice={product.price}
-        //addToCart={this.state.numberOfItemsInCart}
-        />
-    })
-}
+        this.setState((state, props)=>{
+            this.state.products.map((product,i)=>{
+                return <ProductDetail 
+                key={i}
+                productName={product.name}
+                productDescription={product.description}
+                productReviews={product.reviews}
+                //productRating={product.rating}
+                productUrl={product.imgUrl}
+                productPrice={product.price}
+                addToCart={this.state.numberOfItemsInCart}
+                />
+            })
+        })
+    }
     render(){
         return (
             <div className="App">

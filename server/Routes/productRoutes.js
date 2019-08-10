@@ -4,6 +4,6 @@ const {list, show, create} = require("../Controllers/productController");
 
 router.get("/products", list);
 router.get("/products/:id", show);
-router.get("/products", create);
+router.post("/products", create);
 
 module.exports = router;
