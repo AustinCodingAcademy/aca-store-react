@@ -15,7 +15,6 @@ class NewProduct extends React.Component {
                     debugger
                     event.preventDefault();
                     this.props.createItem(this.state);
-                    this.props.printProduct();
                 }}
                 
                 onChange={(event)=>{

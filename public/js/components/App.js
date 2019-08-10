@@ -1,48 +1,42 @@
 class App extends React.Component {
     state = {
         products: [],
-        numberOfItemsInCart: 7,
+        numberOfItemsInCart: 0,
         cart: []
     }
-
     componentDidMount() {
         debugger
         fetch("http://localhost:3002/products")
         .then(res=>res.json())
         .then(products=>this.setState({products}));
     }
-
     addToCart = (cartItem) => {
-        this.setState((state, props) => {
-            this.state.numberOfItemsInCart += 1;
-            this.state.cart.push(cartItem)
-            return {cart: this.state.cart};
+        const newCart = this.state.numberOfItemsInCart+1
+        this.setState({numberOfItemsInCart: newCart
+            // this.state.cart.push(cartItem)
+            // return {cart: this.state.cart};
         })
     }
     createItem = (item) => {
-        this.setState((state, props)=>{
-            this.state.products.push(JSON.stringify(item))
-            return {products: this.state.products}
-        })
-        console.log(this.state)
-    }
-    
-    printProduct=()=>{
-        this.setState((state, props)=>{
-            this.state.products.map((product,i)=>{
-                return <ProductDetail 
-                key={i}
-                productName={product.name}
-                productDescription={product.description}
-                productReviews={product.reviews}
-                //productRating={product.rating}
-                productUrl={product.imgUrl}
-                productPrice={product.price}
-                addToCart={this.state.numberOfItemsInCart}
-                />
-            })
-        })
-    }
+        const newProducts = [...this.state.products, item]
+        this.setState({products: newProducts})
+    } 
+    // printProduct=()=>{
+    //     this.setState((state, props)=>{
+    //         this.state.products.map((product,i)=>{
+    //             return <ProductDetail 
+    //             key={i}
+    //             productName={product.name}
+    //             productDescription={product.description}
+    //             productReviews={product.reviews}
+    //             //productRating={product.rating}
+    //             productUrl={product.imgUrl}
+    //             productPrice={product.price}
+    //             addToCart={this.state.numberOfItemsInCart}
+    //             />
+    //         })
+    //     })
+    // }
     render(){
         return (
             <div className="App">
@@ -64,7 +58,22 @@ class App extends React.Component {
                             printProduct={this.printProduct}
                             />
                             <div className="row">
-                                {this.state.products}
+                                {this.state.products.map((product, i)=>(
+                                    <ProductDetail 
+                                    key={i}
+                                    productName={product.name}
+                                    productDescription={product.description}
+                                    productReviews={product.reviews}
+                                    //productRating={product.rating}
+                                    productUrl={product.imgurl}
+                                    productPrice={product.price}
+                                    numberOfItemsInCart={this.state.numberOfItemsInCart}
+                                    addToCart={this.addToCart}
+
+                                    
+                                    />
+                                )
+                                    )}
                             </div>
                         </div>
                     </div>
