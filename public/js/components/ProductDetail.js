@@ -18,6 +18,7 @@ class ProductDetail extends React.Component {
                     <div className="ratings">
                         <p className="pull-right">Reviews: {this.props.productReviews}</p>
                         <p>
+                            {/* {this.props.productRating} */}
                             <span className="glyphicon glyphicon-star"></span>
                             <span className="glyphicon glyphicon-star"></span>
                             <span className="glyphicon glyphicon-star"></span>

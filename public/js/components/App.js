@@ -66,7 +66,7 @@ class App extends React.Component {
                                     productName={product.name}
                                     productDescription={product.description}
                                     productReviews={product.reviews}
-                                    //productRating={product.rating}
+                                    // productRating={product.rating}
                                     productUrl={product.imgurl}
                                     productPrice={product.price}
                                     numberOfItemsInCart={this.state.numberOfItemsInCart}
