@@ -1,5 +1,3 @@
-
-
 function render() {
     ReactDOM.render(
         <App />,

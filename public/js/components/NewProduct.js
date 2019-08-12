@@ -12,7 +12,6 @@ class NewProduct extends React.Component {
         return(
             <div>
                 <form onSubmit={(event)=>{
-                    debugger
                     event.preventDefault();
                     this.props.createItem(this.state);
                 }}

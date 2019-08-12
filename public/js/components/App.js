@@ -5,38 +5,40 @@ class App extends React.Component {
         cart: []
     }
     componentDidMount() {
-        debugger
         fetch("http://localhost:3002/products")
-        .then(res=>res.json())
-        .then(products=>this.setState({products}));
+            .then(res=>res.json())
+            .then(products=>this.setState({products}));
+        fetch("http://localhost:3002/orders")
+            .then(res=>res.json())
+            .then(cart=>this.setState({cart}));
     }
     addToCart = (cartItem) => {
-        const newCart = this.state.numberOfItemsInCart+1
-        this.setState({numberOfItemsInCart: newCart
-            // this.state.cart.push(cartItem)
-            // return {cart: this.state.cart};
+        const newCartQty = this.state.numberOfItemsInCart+1;
+        const newCart = [...this.state.cart, cartItem];
+        console.log(cartItem)
+        this.setState({
+            numberOfItemsInCart: newCartQty,
+            cart: newCart
+        })
+        fetch("http://localhost:3002/orders", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: (cartItem, name),
         })
     }
     createItem = (item) => {
         const newProducts = [...this.state.products, item]
         this.setState({products: newProducts})
-    } 
-    // printProduct=()=>{
-    //     this.setState((state, props)=>{
-    //         this.state.products.map((product,i)=>{
-    //             return <ProductDetail 
-    //             key={i}
-    //             productName={product.name}
-    //             productDescription={product.description}
-    //             productReviews={product.reviews}
-    //             //productRating={product.rating}
-    //             productUrl={product.imgUrl}
-    //             productPrice={product.price}
-    //             addToCart={this.state.numberOfItemsInCart}
-    //             />
-    //         })
-    //     })
-    // }
+        fetch("http://localhost:3002/products", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(item),
+        })
+    }
     render(){
         return (
             <div className="App">
@@ -69,8 +71,6 @@ class App extends React.Component {
                                     productPrice={product.price}
                                     numberOfItemsInCart={this.state.numberOfItemsInCart}
                                     addToCart={this.addToCart}
-
-                                    
                                     />
                                 )
                                     )}
