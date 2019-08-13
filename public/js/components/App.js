@@ -13,7 +13,6 @@ class App extends React.Component {
             .then(cart=>this.setState({cart}));
     }
     addToCart = (cartItem) => {
-        
         const newCartQty = this.state.numberOfItemsInCart+1;
         const newCart = [...this.state.cart, cartItem];
         console.log(cartItem)
@@ -40,14 +39,11 @@ class App extends React.Component {
             body: JSON.stringify(item),
         })
     }
-    stars = (star) => {
-        for (let i=star; star>0; i--) {
-            let counter = star;
-            if (counter!=0) {
-            <span className="glyphicon glyphicon-star"></span>
-            }
-        }
-    }
+    // stars = (star) => {
+    //     for (let i=star; i>0; i--) {
+    //         return <span className="glyphicon glyphicon-star"></span>
+    //     }
+    // }
     render(){
         return (
             <div className="App">
@@ -75,11 +71,12 @@ class App extends React.Component {
                                     productName={product.name}
                                     productDescription={product.description}
                                     productReviews={product.reviews}
-                                    productRating={this.stars(2)}
+                                    productRating={product.rating}
                                     productUrl={product.imgurl}
                                     productPrice={product.price}
                                     numberOfItemsInCart={this.state.numberOfItemsInCart}
                                     addToCart={this.addToCart}
+                                    //stars={this.stars}
                                     />
                                 )
                                     )}
