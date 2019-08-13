@@ -1,4 +1,4 @@
 ReactDOM.render(
-    <App />,
+    <App products={state.products}/>,
     document.getElementById("root")
   );
