@@ -1,24 +1,27 @@
+// ### Header
+// * Header should require a prop numberOfItemsInCart that represents how many products are in the cart
+// * Make sure this is provided to Header from its parent components somehow
+
+
+
 function Header(props) {
-    let itemCount = 0;
-    props.details.map((item)=>{
-        itemCount += item.quantity
-    })
+   
     return ( 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-               <div class="container">
+        <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+               <div className="container">
                  
-                   <div class="navbar-header">
-                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                           <span class="sr-only">Toggle navigation</span>
-                           <span class="icon-bar"></span>
-                           <span class="icon-bar"></span>
-                           <span class="icon-bar"></span>
+                   <div className="navbar-header">
+                       <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                           <span className="sr-only">Toggle navigation</span>
+                           <span className="icon-bar"></span>
+                           <span className="icon-bar"></span>
+                           <span className="icon-bar"></span>
                        </button>
   
                    </div>
                  
-                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                       <ul class="nav navbar-nav">
+                   <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                       <ul className="nav navbar-nav">
                            <li>
                                <a href="#">About</a>
                            </li>
@@ -29,7 +32,7 @@ function Header(props) {
                                <a href="#">Contact</a>
                            </li>
                            <li >
-                               <a href="#">Items In Cart (0)</a>
+                               <a href="#">Items In Cart ({props.cart.length})</a>
                            </li>
                        </ul>
                    </div>
