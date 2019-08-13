@@ -1,0 +1,25 @@
+function ProductDetail(props){
+    return(
+<div className="col-sm-4 col-lg-4 col-md-4">
+<div className="thumbnail">
+    <img src="http://placehold.it/320x150" alt=""/>
+    <div class="caption">
+        <h4 className="pull-right">{props.product.price}</h4>
+        <h4><a href="#">{props.product.name}</a>
+        </h4>
+        <p>{props.product.description}<a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+    </div>
+    <div className="ratings">
+        <p className="pull-right">{props.product.reviews}</p>
+        <p>
+            <span className="glyphicon glyphicon-star">{props.stars}</span>
+            <span className="glyphicon glyphicon-star">{props.stars}</span>
+            <span className="glyphicon glyphicon-star">{props.stars}</span>
+            <span className="glyphicon glyphicon-star">{props.stars}</span>
+            <span className="glyphicon glyphicon-star">{props.stars}</span>
+        </p>
+    </div>
+</div>
+</div>
+    )
+}
