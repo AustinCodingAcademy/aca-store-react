@@ -1,24 +1,37 @@
+// state = {
+//     cart: []
+// }
+
+// allProducts = this.props.products.map((product)=>{
+//     let addProductToCart = this.addProductToCart.bind(this)
+//     return (<ProductDetail key={product.id} addProductToCart={addProductToCart} product={product} name={product.name} imgUrl={product.imgUrl} description={product.description} reviews={product.reviews} price={product.price} rating={product.rating}/>)
+// })
+// addProductToCart(product) {
+//     this.state.cart.push(product)
+//     this.setState({cart: this.state.cart})
+// }
+
 function App(){
     return(
-        <div class="App">
+        <div className="App">
            <Header />
         
-           <div class="container">
+           <div className="container">
        
-               <div class="row">
+               <div className="row">
        
-                   <div class="col-md-3">
-                       <p class="lead">Shop Name</p>
-                       <div class="list-group">
-                           <a href="#" class="list-group-item">Category 1</a>
-                           <a href="#" class="list-group-item">Category 2</a>
-                           <a href="#" class="list-group-item">Category 3</a>
+                   <div className="col-md-3">
+                       <p className="lead">Shop Name</p>
+                       <div className="list-group">
+                           <a href="#" className="list-group-item">Category 1</a>
+                           <a href="#" className="list-group-item">Category 2</a>
+                           <a href="#" className="list-group-item">Category 3</a>
                        </div>
                    </div>
        
-                   <div class="col-md-9">
+                   <div className="col-md-9">
                        <Carousel />
-                       <div class="row">
+                       <div className="row">
                            <ProductDetail />
          
       
@@ -30,7 +43,7 @@ function App(){
        
            </div>
           
-           <div class="container">
+           <div className="container">
        
                <hr/>
        
