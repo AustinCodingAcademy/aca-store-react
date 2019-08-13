@@ -39,11 +39,13 @@ class App extends React.Component {
             body: JSON.stringify(item),
         })
     }
-    // stars = (star) => {
-    //     for (let i=star; i>0; i--) {
-    //         return <span className="glyphicon glyphicon-star"></span>
-    //     }
-    // }
+    stars = (star) => {
+        let show = [];
+        for (let i=0; i<star; i++) {
+            show.push(<span key={i} className="glyphicon glyphicon-star"></span>)
+        }
+        return show
+    }
     render(){
         return (
             <div className="App">
@@ -76,7 +78,7 @@ class App extends React.Component {
                                     productPrice={product.price}
                                     numberOfItemsInCart={this.state.numberOfItemsInCart}
                                     addToCart={this.addToCart}
-                                    //stars={this.stars}
+                                    stars={this.stars}
                                     />
                                 )
                                     )}
