@@ -1,4 +1,4 @@
-function footer(props){
+function Footer(props){
     return(
 <footer>
     <div className="row">

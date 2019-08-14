@@ -11,7 +11,7 @@ function Header(props){
             </button>
         </div>
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul className="nav navbar-nav">
                 <li>
                     <a href="#">About</a>
                 </li>
