@@ -5,6 +5,7 @@ function App(props){
         <div>
             <Header />
             <Container /> 
+            <Products theProducts={props.theProducts}/>
             <Footer />
         </div>
     )

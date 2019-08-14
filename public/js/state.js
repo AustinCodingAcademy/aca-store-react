@@ -1,5 +1,6 @@
-state =  {
+const state =  {
     numberOfItemsInCart: 0,
+    cats:"benny and sal",
     products: [ {
       "id": 1,
       "name": "Body Luxuries Sweet Lavender Hand Sanitizer",
