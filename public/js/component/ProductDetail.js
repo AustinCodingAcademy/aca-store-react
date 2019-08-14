@@ -3,7 +3,7 @@ function ProductDetail(props){
 <div className="col-sm-4 col-lg-4 col-md-4">
 <div className="thumbnail">
     <img src="http://placehold.it/320x150" alt=""/>
-    <div class="caption">
+    <div className="caption">
         <h4 className="pull-right">{props.product.price}</h4>
         <h4><a href="#">{props.product.name}</a>
         </h4>

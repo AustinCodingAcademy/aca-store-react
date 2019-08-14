@@ -1,4 +1,13 @@
-function App(props){
+class App extends React.Component{
+    state ={
+        cart: []
+    }
+    addItemToCart = (product)=>{
+        this.setState(()=>{
+            this.state.cart.push(product);
+        })
+    }
+    render(){
     return (
 <div className="App">
             <Header />
@@ -21,7 +30,6 @@ function App(props){
                     product = {product}
                     />
                 })} 
-                <ProductDetail />
                 </div>
             </div>
         </div>
@@ -32,4 +40,5 @@ function App(props){
     </div>
 </div>
     )
+}
 }
