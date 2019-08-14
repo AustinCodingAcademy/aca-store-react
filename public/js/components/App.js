@@ -4,8 +4,7 @@ function App(props){
     return(
         <div>
             <Header />
-            <Container /> 
-            <Products theProducts={props.theProducts}/>
+            <Container theProducts={props.theProducts}/> 
             <Footer />
         </div>
     )

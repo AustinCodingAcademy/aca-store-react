@@ -1,4 +1,4 @@
-function Container(){
+function Container(props){
     return(
          <div class="container">
                <div class="row">
@@ -13,7 +13,7 @@ function Container(){
                    <div class="col-md-9">
                        <Carousel />
                        <div class="row">
-                           <ProductDetail />
+                       <Products theProducts={props.theProducts} />
                        </div>
                    </div> 
                </div>      
