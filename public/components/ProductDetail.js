@@ -6,7 +6,12 @@ function ProductDetail(props){
     for (let i=0; i<stars; i++){
         htmlStars.push(<span className="glyphicon glyphicon-star"></span>)
     }
-
+    if(stars < 5){
+        let emptyStars = 5-stars;
+        for (let i=0; i<emptyStars; i++){
+            htmlStars.push(<span className = 'glyphicon glyphicon-star-empty'></span>)
+        }
+    }
 
     return(
         <div className="col-sm-4 col-lg-4 col-md-4">
