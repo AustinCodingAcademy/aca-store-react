@@ -13,12 +13,3 @@ function Products(props){
     </div>
     ) 
 }
-
-//going to need to give an array of <PoductDetail/> components
-// renderProductDetail(i){
-    //return (
-       // <div>
-       //   <ProductDetail[i]/>
-       //</div>
-       // )
-    //}

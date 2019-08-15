@@ -1,9 +1,10 @@
 
 
 function App(props){
+    let shoppingcart =[6]
     return(
         <div>
-            <Header />
+            <Header shoppingcart={shoppingcart}/>
             <Container theProducts={props.theProducts}/> 
             <Footer />
         </div>

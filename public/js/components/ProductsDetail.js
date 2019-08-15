@@ -9,7 +9,7 @@ function ProductsDetail(props){
                         <p>{props.product.description} at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                  </div>
                  <div class="ratings">
-                    <p class="pull-right">15 reviews</p>
+                    <p class="pull-right">{props.product.reviews} reviews</p>
                     <p>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
