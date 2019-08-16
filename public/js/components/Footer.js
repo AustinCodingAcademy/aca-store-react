@@ -1,10 +1,10 @@
 function Footer(){
     return(
-        <div class="container">
+        <div className="container">
        <hr/>
        <footer>
-           <div class="row">
-               <div class="col-lg-12">
+           <div className="row">
+               <div className="col-lg-12">
                    <p>Copyright &copy; Your Website 2014</p>
                    
                </div>

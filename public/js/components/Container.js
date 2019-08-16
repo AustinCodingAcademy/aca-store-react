@@ -1,18 +1,18 @@
 function Container(props){
     return(
-         <div class="container">
-               <div class="row">
-                   <div class="col-md-3">
-                       <p class="lead">Shop Name</p>
-                       <div class="list-group">
-                           <a href="#" class="list-group-item">Category 1</a>
-                           <a href="#" class="list-group-item">Category 2</a>
-                           <a href="#" class="list-group-item">Category 3</a>
+         <div className="container">
+               <div className="row">
+                   <div className="col-md-3">
+                       <p className="lead">Smitty's Shop</p>
+                       <div className="list-group">
+                           <a href="#" className="list-group-item">Category 1</a>
+                           <a href="#" className="list-group-item">Category 2</a>
+                           <a href="#" className="list-group-item">Category 3</a>
                        </div>
                    </div>
-                   <div class="col-md-9">
+                   <div className="col-md-9">
                        <Carousel />
-                       <div class="row">
+                       <div className="row">
                        <Products theProducts={props.theProducts} />
                        </div>
                    </div> 

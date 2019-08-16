@@ -1,9 +1,9 @@
 
 
 function App(props){
-    let shoppingcart =[6]
+    let shoppingcart = props.numberOfItemsInCart
     return(
-        <div>
+        <div className="App">
             <Header shoppingcart={shoppingcart}/>
             <Container theProducts={props.theProducts}/> 
             <Footer />

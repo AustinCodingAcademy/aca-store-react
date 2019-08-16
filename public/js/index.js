@@ -1,3 +1,4 @@
 
 const products = state.products
-ReactDOM.render( <App theProducts={products}/>,document.getElementById("root"));
+const numberOfItemsInCart = state.numberOfItemsInCart
+ReactDOM.render( <App theProducts={products} numberOfItemsInCart={numberOfItemsInCart}/>,document.getElementById("root"));

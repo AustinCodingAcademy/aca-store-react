@@ -1,9 +1,9 @@
 function Products(props){
     let myProducts = props.theProducts
-        let productsList = myProducts.map((product)=>{
+        let productsList = myProducts.map((product, i)=>{
             return (      
                 <div> 
-                    <ProductsDetail product={product}/>
+                    <ProductsDetail product={product} key={i}/>
                 </div>  
             )   
         })

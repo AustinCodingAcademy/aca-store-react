@@ -1,5 +1,5 @@
 const state =  {
-    numberOfItemsInCart: 0,
+    numberOfItemsInCart: 9,
     cats:"benny and sal",
     products: [ {
       "id": 1,
