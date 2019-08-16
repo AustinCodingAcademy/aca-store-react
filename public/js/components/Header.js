@@ -1,33 +1,32 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-<div class="container">
-  
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-
-    </div>
-  
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-            <li >
-                <a href="#">Items In Cart (0)</a>
-            </li>
-        </ul>
-    </div>
- 
-</div>
-
-</nav>
+function Header(props) {
+    return(
+        <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div className="container">
+                <div className="navbar-header">
+                    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span className="sr-only">Toggle navigation</span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                    </button>
+                </div>  
+                <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul className="nav navbar-nav">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li >
+                            <a href="#">Items In Cart ({props.cartNumber})</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    )
+}
