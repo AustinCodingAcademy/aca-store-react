@@ -1,7 +1,20 @@
-function App() {
+function App(props) {
+  let products = props.state.products.map((product, index) => {
+    return (
+      <ProductDetail
+        name={product.name}
+        id={product.id}
+        description={product.description}
+        reviews={product.reviews}
+        rating={product.rating}
+        imgUrl={product.imgUrl}
+        price={product.price}
+      />
+    );
+  });
   return (
     <div className="App">
-      <Header />
+      <Header numberOfItems={props.state.numberOfItemsInCart} />
 
       <div className="container">
         <div className="row">
@@ -22,9 +35,7 @@ function App() {
 
           <div className="col-md-9">
             <Carousel />
-            <div className="row">
-              <ProductDetail />
-            </div>
+            <div className="row">{products}</div>
           </div>
         </div>
       </div>
