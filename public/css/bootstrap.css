@@ -49,6 +49,9 @@ a:active,
 a:hover {
   outline: 0;
 }
+/* #addToCartBtn{
+  
+} */
 abbr[title] {
   border-bottom: 1px dotted;
 }

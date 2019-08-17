@@ -1,6 +1,4 @@
 function ProductDetail(props){
-    console.log("product detail")
-    console.log(props)
     let stars = props.product.rating;
     let htmlStars = [];
     for (let i=0; i<stars; i++){
@@ -29,6 +27,12 @@ function ProductDetail(props){
                         {htmlStars}
                     </p>
                 </div>
+                <div>
+                    <button id="addToCartBtn" onClick = {() => {
+                        props.addToCart(props.product._id)
+                    }}>Add to Cart</button>
+                </div>
+                
             </div>
         </div>
     )
