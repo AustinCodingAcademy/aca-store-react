@@ -1,4 +1,5 @@
 function Header(props){
+
     if(props.cart){
         return(
             <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -25,7 +26,7 @@ function Header(props){
                                 <a href="#">Contact</a>
                             </li>
                             <li >
-                                <a href="#">Items In Cart ({props.cart.length})</a>
+                                <a href="#">Items In Cart ({props.countCartItems(props.cart)})</a>
                             </li>
                         </ul>
                     </div>

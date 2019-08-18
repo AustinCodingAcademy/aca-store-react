@@ -42,6 +42,16 @@ class App extends React.Component{
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(cart)
             })
+        
+    }
+
+    countCartItems = (cart) =>{
+        let numOfItems = 0;
+        cart.map(i =>{
+            let quantity = i.quantity
+            numOfItems += quantity
+        })
+        return numOfItems
     }
 
     render(){
@@ -50,6 +60,7 @@ class App extends React.Component{
             <div className="App">
                 <Header 
                     cart = {this.state.user.cart}
+                    countCartItems = {this.countCartItems}
                 />
                 <div className="container">      
                     <div className="row">   
