@@ -26,6 +26,9 @@ function Header(props){
                 <li >
                     <a href="#">Items In Cart ({state.numberOfItemsInCart})</a>
                 </li>
+                <li >
+                    <a href="#"><button>Checkout</button></a>
+                </li>
             </ul>
         </div>
      
