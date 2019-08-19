@@ -87,7 +87,7 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 
 ### Server
 * Create a database for this project
-* Create a web server for ths project
+* Create a web server for this project
 * Create routes for products and orders
 
 ### Fetch
