@@ -27,7 +27,24 @@ function Header(props){
                                <a href="#">Contact</a>
                            </li>
                            <li >
-                               <a href="#">Items In Cart: {props.shoppingcart}</a>
+                           <a href="#">Items In Cart: {props.shoppingcart.length}</a>
+                           </li>
+                           <li >
+                           <a href="#" onClick={(e)=>{
+                                   e.preventDefault();
+                                   console.log(props.shoppingcart)
+                                   }}
+                                   >View Cart Products
+                            </a>
+                           </li>
+                           <li >
+                           <a href="#" onClick={(e)=>{
+                                   e.preventDefault();
+                                    alert("Order Proccessed")
+                                   console.log(props.shoppingcart)
+                                   }}
+                                   >Checkout
+                            </a>
                            </li>
                        </ul>
                    </div>

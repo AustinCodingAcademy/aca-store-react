@@ -13,7 +13,7 @@ function Container(props){
                    <div className="col-md-9">
                        <Carousel />
                        <div className="row">
-                       <Products theProducts={props.theProducts} />
+                       <ProductsList products={props.products}  addToCart={props.addToCart}/>
                        </div>
                    </div> 
                </div>      

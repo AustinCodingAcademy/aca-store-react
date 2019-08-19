@@ -1,16 +1,19 @@
 const express= require('express');
 const bodyParser= require('body-parser');
+const productsRoutes = require('./routes/products')
+const mongoose = require('mongoose')
+
 //const ItemRoutes = require('./routes/Items')
 
-//mongoose.connect('mongodb+srv://GChivas:smitty5smitty5@cluster0-e2mbo.mongodb.net/mernshoppinglist?retryWrites=true', {useNewUrlParser: true})
-//.then(console.log("Connected to database.."))
-//.catch(err=>console.log(err))
+mongoose.connect('mongodb://GChivas:smitty5smitty5@cluster0-shard-00-00-e2mbo.mongodb.net:27017,cluster0-shard-00-01-e2mbo.mongodb.net:27017,cluster0-shard-00-02-e2mbo.mongodb.net:27017/aca-store-react-db?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true', {useNewUrlParser: true})
+.then(console.log("Connected to database.."))
+.catch(err=>console.log(err))
 
 let app = express();
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
-//app.use(ItemRoutes)
+app.use(productsRoutes)
 
 
 const PORT = process.env.PORT || 4000
