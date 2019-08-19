@@ -1,4 +1,10 @@
 class App extends React.Component{
+    state = {
+        products: [],
+        numberOfItemsInCart: 0,
+        cart: []
+    }
+
     render(){
         return(
             <div className="App">
