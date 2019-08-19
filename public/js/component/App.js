@@ -17,11 +17,11 @@ class App extends React.Component {
     });
     return (
       <div className="App">
-        <Header cart={this.state.numberOfItemsInCart} />
+        <Header cart={this.state.cart} />
         <div className="container">
           <div className="row">
             <div className="col-md-3">
-              <p className="lead">Shop Name</p>
+              <p className="lead">Honest Joe Willie's Store!</p>
               <div className="list-group">
                 <a href="#" className="list-group-item">
                   Category 1
@@ -38,8 +38,7 @@ class App extends React.Component {
               <Carousel />
               <div className="row">
                 //
-                <ProductDetail product={aProduct} />
-                {/* {aProduct} */}
+                {aProduct}
               </div>
             </div>
           </div>
