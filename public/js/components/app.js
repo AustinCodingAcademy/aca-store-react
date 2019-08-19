@@ -5,6 +5,23 @@ class App extends React.Component{
         cart: []
     }
 
+    addToCart = (cartItem) => {
+        const newCartQty = this.state.numberOfItemsInCart+1;
+        const newCart = [...this.state.cart, cartItem];
+        console.log(cartItem)
+        this.setState({
+            numberOfItemsInCart: newCartQty,
+            cart: newCart
+        })
+        fetch("http://localhost:3002/orders", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({name:cartItem})
+        })
+    }
+
     render(){
         return(
             <div className="App">
