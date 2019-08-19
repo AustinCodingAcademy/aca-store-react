@@ -1,19 +1,22 @@
 function App(props) {
     let products = props.products.map((prod, i) => {
-        <ProductDetail 
-            key={i} 
-            name={prod.name}
-            description={prod.description} 
-            reviews={prod.reviews}
-            rating={prod.rating}
-            imgUrl={prod.imgURL}
-            price={prod.price}
-        />
-    })
+        return (
+            <ProductDetail 
+                key={i} 
+                id={prod.id}
+                name={prod.name}
+                description={prod.description} 
+                reviews={prod.reviews}
+                rating={prod.rating}
+                imgUrl={prod.imgUrl}
+                price={prod.price}
+            />
+        )
+    });
 
     return (
         <div className="App">
-            <Header cartNumber={props.numberOfItemsInCart}/>
+            <Header cartNumber={props.numberOfItemsInCart} />
             <div className="container">
                 <div className="row">
                     <div className="col-md-3">
@@ -32,7 +35,7 @@ function App(props) {
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div className="container">
                 <hr/>
                 <Footer />
             </div>

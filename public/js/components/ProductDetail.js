@@ -1,7 +1,7 @@
 function ProductDetail(props) {
-    let rating;
+    let ratings = [];
     for(let i = 0; i < props.rating; i++) {
-        rating += <ProductRating />
+            ratings.push(<ProductRating />)
     }
 
     return(
@@ -17,7 +17,7 @@ function ProductDetail(props) {
                 <div className="ratings">
                     <p className="pull-right">{props.reviews} reviews</p>
                     <p>
-                        {rating}
+                        {ratings}
                     </p>
                 </div>
             </div>
