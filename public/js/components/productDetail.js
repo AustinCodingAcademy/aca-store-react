@@ -19,6 +19,9 @@ function ProductDetail(){
                                            <span className="glyphicon glyphicon-star"></span>
                                        </p>
                                    </div>
+                                   <div>
+                                       <button type="button" class="btn btn-info">Add To Cart</button>
+                                   </div>
                                </div>
                            </div>
     )

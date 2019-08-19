@@ -1,16 +1,3 @@
-// state = {
-//     cart: []
-// }
-
-// allProducts = this.props.products.map((product)=>{
-//     let addProductToCart = this.addProductToCart.bind(this)
-//     return (<ProductDetail key={product.id} addProductToCart={addProductToCart} product={product} name={product.name} imgUrl={product.imgUrl} description={product.description} reviews={product.reviews} price={product.price} rating={product.rating}/>)
-// })
-// addProductToCart(product) {
-//     this.state.cart.push(product)
-//     this.setState({cart: this.state.cart})
-// }
-
 function App(){
     return(
         <div className="App">
