@@ -40,7 +40,6 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 * Make sure everything is valid JSX. Remember className. HTML comments are not valid JSX.
 * App should use the products prop and map the array of products into an array of ProductDetail components
 
-
 ### ProductDetail
 * The ProductDetail should repesent only one single product
 * The ProductDetail should take a prop called `product` which is an object, and use it to populate price, name, description reviews and stars.
@@ -88,7 +87,7 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 
 ### Server
 * Create a database for this project
-* Create a web server for ths project
+* Create a web server for this project
 * Create routes for products and orders
 
 ### Fetch
