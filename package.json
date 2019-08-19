@@ -1,0 +1,19 @@
+{
+  "name": "aca-store-react",
+  "version": "1.0.0",
+  "description": "We need to build the front end web app of our ecommerce store. This project is based on an existing website that has no functionality. If you worked for this company, they may ask you to fix their current website that doesn't do anything and make it functional for people to buy products on it. You might make the decision to use React to do this. Converting normal websites to React components is a very common thing to do in the industry.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Honestjoewillie/aca-store-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Honestjoewillie/aca-store-react/issues"
+  },
+  "homepage": "https://github.com/Honestjoewillie/aca-store-react#readme"
+}
