@@ -1,7 +1,7 @@
 function ProductDetail(props) {
     let ratings = [];
     for(let i = 0; i < props.rating; i++) {
-            ratings.push(<ProductRating />)
+            ratings.push(<ProductRating key={`${i}star`}/>)
     }
 
     return(
@@ -12,6 +12,7 @@ function ProductDetail(props) {
                     <h4 className="pull-right">{props.price}</h4>
                     <h4><a href="#">{props.name}</a></h4>
                     <p>{props.description}</p>
+                    <button onClick={() => {props.addToCart(props.product)}}>Add To Cart</button>
                     <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                 </div>
                 <div className="ratings">
