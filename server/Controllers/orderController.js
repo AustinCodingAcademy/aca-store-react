@@ -13,7 +13,15 @@ exports.show = function show(req, res) {
 }
 
 exports.create = function create(req, res) {
-    let item = {name: req.body.name}
+    let item = {
+        id: req.body.id,
+        name: req.body.name,
+        description: req.body.description,
+        reviews: req.body.reviews,
+        rating: req.body.rating,
+        imgurl: req.body.imgurl,
+        price: req.body.price
+    }
     let newOrder = new Order(item);
     newOrder.save();
 }

@@ -2,7 +2,8 @@ class App extends React.Component {
     state = {
         products: [],
         numberOfItemsInCart: 0,
-        cart: []
+        cart: [],
+        display: 0
     }
     componentDidMount() {
         fetch("http://localhost:3002/products")
@@ -25,7 +26,7 @@ class App extends React.Component {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({name:cartItem})
+            body: JSON.stringify(cartItem)
         })
     }
     createItem = (item) => {
@@ -39,58 +40,45 @@ class App extends React.Component {
             body: JSON.stringify(item),
         })
     }
-    stars = (star) => {
-        let show = [];
-        for (let i=0; i<star; i++) {
-            show.push(<span key={i} className="glyphicon glyphicon-star"></span>)
-        }
-        return show
+
+    changeView = (num) => {
+        this.setState({display: num})
     }
     render(){
+        let content = null
+        if (this.state.display === 0) {
+            content = <ProductList
+            products = {this.state.products}
+            addToCart = {this.addToCart}
+            numberOfItemsInCart = {this.state.numberOfItemsInCart}
+            />
+        } else if (this.state.display === 1) {
+            content = <ShoppingCart
+            cart = {this.state.cart}
+            addToCart = {this.addToCart}
+            numberOfItemsInCart = {this.state.numberOfItemsInCart}
+            />
+        } else if (this.state.display === 2) {
+            content = <NewProduct
+            createItem = {this.createItem}
+            />
+        }
+
         return (
-            <div className="App">
-                <Header numberOfItemsInCart={this.state.numberOfItemsInCart}/>    
-                <div className="container">   
-                    <div className="row">
-                        <div className="col-md-3">
-                            <p className="lead">Shop Name</p>
-                            <div className="list-group">
-                                <a href="#" className="list-group-item">Category 1</a>
-                                <a href="#" className="list-group-item">Category 2</a>
-                                <a href="#" className="list-group-item">Category 3</a>
-                            </div>
-                        </div>
-                        <div className="col-md-9">
-                            <Carousel />
-                            <NewProduct
-                            createItem={this.createItem}
-                            printProduct={this.printProduct}
-                            />
-                            <div className="row">
-                                {this.state.products.map((product, i)=>(
-                                    <ProductDetail 
-                                    key={i}
-                                    productName={product.name}
-                                    productDescription={product.description}
-                                    productReviews={product.reviews}
-                                    productRating={product.rating}
-                                    productUrl={product.imgurl}
-                                    productPrice={product.price}
-                                    numberOfItemsInCart={this.state.numberOfItemsInCart}
-                                    addToCart={this.addToCart}
-                                    stars={this.stars}
-                                    />
-                                )
-                                    )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="container">
-                    <hr/>
-                    <Footer />
-                </div>
-            </div>
+            <Layout
+            products = {this.state.products}
+            cart = {this.state.cart}
+            numberOfItemsInCart = {this.state.numberOfItemsInCart}
+            createItem = {this.createItem}
+            addToCart = {this.addToCart}
+            componentDidMount = {this.componentDidMount}
+            changeView = {this.changeView}
+            >
+                {content}
+            </Layout>
         )
     }
+}
+App.propTypes = {
+    products: PropTypes.array.isRequired
 }

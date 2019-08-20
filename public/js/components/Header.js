@@ -24,7 +24,19 @@ class Header extends React.Component {
                             <a href="#">Contact</a>
                         </li>
                         <li >
-                            <a href="#">Items In Cart ({this.props.numberOfItemsInCart})</a>
+                            <a href="#" onClick={()=>{
+                                this.props.changeView(0)
+                            }}>Products</a>
+                        </li>
+                        <li >
+                            <a href="#" onClick={()=>{
+                                this.props.changeView(1)
+                            }}>Items In Cart ({this.props.cart.length})</a>
+                        </li>
+                        <li >
+                            <a href="#" onClick={()=>{
+                                this.props.changeView(2)
+                            }}>Create New Product</a>
                         </li>
                     </ul>
                 </div>
@@ -32,4 +44,8 @@ class Header extends React.Component {
         </nav>
         )
     }
+}
+Header.propTypes = {
+    changeView: PropTypes.func.isRequired,
+    numberOfItemsInCart: PropTypes.number.isRequired
 }

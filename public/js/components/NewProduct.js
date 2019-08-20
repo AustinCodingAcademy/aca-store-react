@@ -39,3 +39,7 @@ class NewProduct extends React.Component {
         )
     }
 }
+
+NewProduct.propTypes = {
+    createItem: PropTypes.func.isRequired
+}
