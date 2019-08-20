@@ -17,11 +17,16 @@ exports.create = function create(req, res){
 }
 
 exports.updateCart = function updateCart(req,res){
-    let user = User.find({name: 'Selena'})[0];
-    User.findOneAndUpdate({}, user, function(err, user){
-        user.cart = req.body
-        user.save().then(savedCart =>{
-            console.log(savedCart);
-        })
-    });
+    User.findByIdAndUpdate(req.body._id, req.body, (err, user)=>{
+        console.log(req.body._id)
+        return res.json(user);
+    })
+
+    // let user = User.find({name: 'Selena'})[0];
+    // User.findOneAndUpdate({}, user, function(err, user){
+    //     user.cart = req.body
+    //     user.save().then(savedCart =>{
+    //         console.log(savedCart);
+    //     })
+    // });
 }

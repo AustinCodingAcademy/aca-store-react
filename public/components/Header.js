@@ -26,7 +26,7 @@ function Header(props){
                                 <a href="#">Contact</a>
                             </li>
                             <li >
-                                <a href="#">Items In Cart ({props.countCartItems(props.cart)})</a>
+                                <a href="#" onClick = {props.cartView}>Items In Cart ({props.countCartItems(props.cart)})</a>
                             </li>
                         </ul>
                     </div>
