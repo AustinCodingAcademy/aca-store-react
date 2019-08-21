@@ -3,6 +3,10 @@ function ProductDetail (props) {
     for (let i=0; i<props.productRating; i++) {
         star.push(<span key={i} className="glyphicon glyphicon-star"></span>)
     }
+    let emptyStar = [];
+    for (let i=0; i<5-props.productRating; i++) {
+        emptyStar.push(<span key={i} className="glyphicon glyphicon-star-empty"></span>)
+    }
     return (
         <div className="col-sm-4 col-lg-4 col-md-4">
             <div className="thumbnail">
@@ -20,7 +24,7 @@ function ProductDetail (props) {
                 <div className="ratings">
                     <p className="pull-right">Reviews: {props.productReviews}</p>
                     <p>
-                        {star}
+                        {star}{emptyStar}
                     </p>
                 </div>
             </div>
