@@ -1,6 +1,7 @@
 const express= require('express');
 const bodyParser= require('body-parser');
-const productsRoutes = require('./routes/products')
+const productsRoutes = require('./routes/products');
+const orderRoutes = require('./routes/orders')
 const mongoose = require('mongoose')
 
 //const ItemRoutes = require('./routes/Items')
@@ -13,7 +14,7 @@ let app = express();
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
-app.use(productsRoutes)
+app.use(productsRoutes, orderRoutes)
 
 
 const PORT = process.env.PORT || 4000

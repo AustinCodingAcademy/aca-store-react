@@ -32,16 +32,11 @@ function Header(props){
                            <li >
                            <a href="#" onClick={(e)=>{
                                    e.preventDefault();
-                                   console.log(props.shoppingcart)
-                                   }}
-                                   >View Cart Products
-                            </a>
-                           </li>
-                           <li >
-                           <a href="#" onClick={(e)=>{
-                                   e.preventDefault();
-                                    alert("Order Proccessed")
-                                   console.log(props.shoppingcart)
+                                   props.shoppingcart.map((order)=>{
+                                        props.postOrders(order)
+                                        console.log(order)
+                                        });
+                                        alert("Order sent! thank you!")
                                    }}
                                    >Checkout
                             </a>

@@ -10,7 +10,6 @@ exports.list = function list(req, res){
         }
     })
 };
-
 exports.create = function create(req, res){
     let newProduct = new Product(req.body);
     newProduct.save();
